@@ -1,5 +1,6 @@
-import MyProjects from './pages/MyProjects/MyProjects';
+import React from 'react';
 
+import MyProjects from './pages/MyProjects/MyProjects';
 const App = () => {
 
   return (
