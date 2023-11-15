@@ -1,0 +1,195 @@
+main {
+  padding-left: 16px;
+  @media screen and (min-width: 768px) {
+  padding-left: 160px;
+  padding-right: 160px;
+  max-width: 1660px;
+  }
+}
+.ourprojects{
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+    
+    }
+}
+.ourprojects-h1{
+  width: 234px;
+  height: 36px;
+  margin-top: 19px;
+  margin-right: 125px;
+  color: var(--Black, #141414);
+  font-family: Avenir Next Georgian;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+  @media screen and (min-width: 768px) {
+    width: 351px;
+    height: 54px;
+    margin-top: 100px;
+    font-size: 36px;
+  }
+}
+.ourprojects-h2 {
+  
+  width: 343px;
+  height: 105px;
+  margin-right: 16px;
+  color: rgba(20, 20, 20, 0.60);
+  font-family: Avenir Next Georgian;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  @media screen and (min-width: 768px) {
+    width: 790px;
+    height: 42px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+
+.buttons{
+  width: 525px;
+  height: 40px;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 12px;
+  @media screen and (min-width: 768px) {
+    margin-top: 80px;
+    
+  }
+  button{
+    color: var(--White, #FFF);
+    padding: 9.5px 28px;
+    border-radius: 100px;
+    background: rgba(20, 20, 20, 0.30);
+    border: none;
+    font-family: Avenir Next Georgian;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+    text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      padding: 13.5px 28px;
+      align-items: flex-start;
+      
+      gap: 10px;
+    }
+  }
+}
+.projects-gallery{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  
+  
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+  }
+ img {
+  width: 343px;
+  height: 218px;
+  flex-shrink: 0;
+  @media screen and (min-width: 768px) {
+    width: 385px;
+    height: 244px;
+    
+  }
+ }
+ .image-container{
+  width: 400px;
+ }
+ .title {
+  width: 119px;
+  height: 21px;
+  margin-top: 12px;
+  color: var(--Orange, #F58634);
+  font-family: Avenir Next Georgian;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; 
+  @media screen and (min-width: 768px) {
+    width: 385px;
+    height: 21px;
+  }
+ }
+ .subtitle{
+  width: 204px;
+  height: 24px;
+  color: var(--Black, #141414);
+  font-family: Avenir Next Georgian;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; 
+  @media screen and (min-width: 768px) {
+    width: 255px;
+    height: 30px;
+    font-size: 20px;
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
