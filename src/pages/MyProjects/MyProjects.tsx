@@ -1,50 +1,81 @@
-import React from 'react';
+import './MyProjects.scss';
+import React, { useState } from 'react';
 import './MyProjects.scss';
 
 const MyProjects = () => {
-  const projects=[
-    {
-        url:"./images/parliament.png", 
-        isDone:true,
-        title:"დასრულებული"
-    },
-    {
-        url:"./images/parliament.png", 
-        isDone:false,
-        title:"დასრულებული"
-    },
-    {
-        url:"./images/parliament.png", 
-        isDone:true,
-        title:"დასრულებული"
-    },
+  const [filter, setFilter] = useState('all');
+
+  const projects = [
     {
       url:"./images/parliament.png", 
       isDone:true,
-      title:"დასრულებული"
+      title:"ქუთაისის პარლამენტილი"
+  },
+  {
+      url:"./images/parliament.png", 
+      isDone:false,
+      title:"ქუთაისის პარლამენტილი"
+  },
+  {
+      url:"./images/parliament.png", 
+      isDone:true,
+      title:"ქუთაისის პარლამენტილი"
   },
   {
     url:"./images/parliament.png", 
     isDone:true,
-    title:"დასრულებული"
+    title:"ქუთაისის პარლამენტილი"
 },
 {
   url:"./images/parliament.png", 
   isDone:true,
-  title:"დასრულებული"
+  title:"ქუთაისის პარლამენტილი"
 },
 {
-  url:"./images/parliament.png", 
-  isDone:true,
-  title:"დასრულებული"
+url:"./images/parliament.png", 
+isDone:true,
+title:"ქუთაისის პარლამენტილი"
 },
 {
-  url:"./images/parliament.png", 
-  isDone:true,
-  title:"დასრულებული"
+url:"./images/parliament.png", 
+isDone:true,
+title:"ქუთაისის პარლამენტილი"
 },
-    
-  ]
+{
+url:"./images/parliament.png", 
+isDone:true,
+title:"ქუთაისის პარლამენტილი"
+},
+{
+url:"./images/parliament.png", 
+isDone:false,
+title:"ქუთაისის პარლამენტი"
+},
+{
+url:"./images/parliament.png", 
+isDone:false,
+title:"ქუთაისის პარლამენტი"
+},
+{
+url:"./images/parliament.png", 
+isDone:false,
+title:"ქუთაისის პარლამენტი"
+},
+{
+url:"./images/parliament.png", 
+isDone:false,
+title:"ქუთაისის პარლამენტი"
+},]
+  const filteredProjects = projects.filter(item => {
+    if (filter === 'all') {
+      return true;
+    } else if (filter === 'inProgress') {
+      return !item.isDone;
+    } else {
+      return item.isDone;
+    }
+  });
+console.log(filteredProjects)
   return (
     <main>
       <section className="ourprojects">
@@ -57,30 +88,23 @@ const MyProjects = () => {
         </h2>
         </div>
         <div className="buttons">
-        <button >
-          ყველა პროექტი
-        </button>
-        <button >
-          მიმდინარე
-        </button>
-        <button >
-          დასრულებული
-        </button>
-      </div>
+          <button onClick={() => setFilter('all')}>ყველა პროექტი</button>
+          <button onClick={() => setFilter('inProgress')}>მიმდინარე</button>
+          <button onClick={() => setFilter('completed')}>დასრულებული</button>
+        </div>
       </section>
-      
 
-      {/* New containers */}
       <section className="projects-gallery">
-        {projects.map(item=>{
-            return(<div className="image-container" >
+        {filteredProjects.map(item => (
+          <div className="image-container" key={Math.random()}>
             <img src={item.url} alt="image_1" className="parliament-image" />
-            <h1 className="title">{item.title}</h1>
-            <h2 className="subtitle">{item.isDone?"ქუთაისის პარლამენტი":"ქუთაისის პარლამენტი"}</h2>
-          </div>)
-        })}
-        
-        </section>
+            <h1 className="title">{item.isDone ? 'დასრულებული' : 'მიმდინარე'}</h1>
+            <h2 className="subtitle">
+            {item.title}
+            </h2>
+          </div>
+        ))}
+      </section>
     </main>
   );
 };
