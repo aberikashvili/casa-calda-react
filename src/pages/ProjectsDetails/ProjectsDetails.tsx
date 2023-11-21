@@ -1,32 +1,70 @@
-import React from "react";
+
 import './ProjectsDetails.scss'
 import Image from './images/Smart.png'
 import ImageA from './images/Arrow1.png'
 import ImageB from './images/Arrow2.png'
-
+import  { useState, useRef } from "react";
 import image2 from './images2/Image2.png'
 const ProjectsDetails=()=> {
   const projects=[
     {
         url:'./images2/Image3.png', 
         isDone:true,
-        title:"დასრულებული"
+        title:"ქუთაისის პარლამენტი"
     },
     {
         url:"./images2/Image4.png", 
         isDone:false,
-        title:"დასრულებული"
+        title:"ქუთაისის პარლამენტი"
     },
     {
         url:"./images2/Image5.png", 
         isDone:true,
-        title:"დასრულებული"
+        title:"ქუთაისის პარლამენტი"
     },
     {
       url:"./images2/Image3.png", 
       isDone:true,
-      title:"დასრულებული"
-  },]
+      title:"ქუთაისის პარლამენტი"
+  },
+  {
+    url:'./images2/Image3.png', 
+    isDone:true,
+    title:"ქუთაისის პარლამენტი"
+},
+{
+    url:"./images2/Image4.png", 
+    isDone:false,
+    title:"ქუთაისის პარლამენტი"
+},
+{
+    url:"./images2/Image5.png", 
+    isDone:true,
+    title:"ქუთაისის პარლამენტი"
+},
+{
+  url:"./images2/Image3.png", 
+  isDone:true,
+  title:"ქუთაისის პარლამენტი"
+},]
+
+const [scrollPosition, setScrollPosition] = useState(0);
+const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+const handleScroll = (scrollOffset:number) => {
+  let newScrollPosition = scrollPosition + scrollOffset;
+  if(scrollContainerRef?.current){
+
+  if (newScrollPosition<0){
+    newScrollPosition=0
+  }
+  scrollContainerRef.current.scrollLeft = newScrollPosition;
+  }
+  setScrollPosition(newScrollPosition);
+  
+  console.log(scrollContainerRef.current)
+};
+
     return (
      <main >
       
@@ -76,11 +114,22 @@ const ProjectsDetails=()=> {
       <div className="gallery-h1">
         <h1>ფოტო გალერეა</h1>
         <div className="arrows">
+          <button>
         <img src={ImageA} alt="ArrowImage" className="arrow" />
+        </button>
+        <button>
         <img src={ImageB} alt="ArrowImage"  className="arrow"/>
+        </button>
         </div>
         </div>
         <div className="gridcontainer">
+          <div className="item item-1"></div>
+          <div className="item item-2"></div>
+          <div className="item item-3"></div>
+          <div className="item item-4"></div>
+          <div className="item item-5"></div>
+       </div>
+       <div className="gridcontainer">
           <div className="item item-1"></div>
           <div className="item item-2"></div>
           <div className="item item-3"></div>
@@ -93,16 +142,20 @@ const ProjectsDetails=()=> {
        <div className="otherprojects-h1">
        <h1 >სხვა პროექტები</h1>
         <div className="arrows">
+        <button onClick={()=>handleScroll(-100)}>
         <img src={ImageA} alt="ArrowImage" className="arrow" />
-        <img src={ImageB} alt="ArrowImage"  className="arrow"/>
+        </button>
+        <button onClick={()=>handleScroll(100)}>
+        <img src={ImageB} alt="ArrowImage"  className="arrow"  />
+        </button>
         </div>
         </div>
-       <div className="slider-containers">
+       <div className="slider-containers" ref={scrollContainerRef} >
         {projects.map(item=>{
             return(<div className="slider-container" id='container1'>
             <img src={item.url} alt="image_1" className="parliament-image" />
-            <h1 className="title">{item.title}</h1>
-            <h2 className="subtitle">{item.isDone?"ქუთაისის პარლამენტი":"ქუთაისის პარლამენტი"}</h2>
+            <h1 className="title">{item.isDone?"დასრულებული":"მიმდინარე"}</h1>
+            <h2 className="subtitle">{item.title}</h2>
           </div>)
         })}
         
@@ -111,6 +164,7 @@ const ProjectsDetails=()=> {
 
 
         </section>
+        
         
       </main>
     );
