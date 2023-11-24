@@ -1,3 +1,4 @@
+
 import './MyProjects.scss';
 import React, { useState } from 'react';
 import './MyProjects.scss';
@@ -9,42 +10,42 @@ const MyProjects = () => {
     {
       url:"./images/parliament.png", 
       isDone:true,
-      title:"ქუთაისის პარლამენტილი"
+      title:"ქუთაისის პარლამენტი"
   },
   {
       url:"./images/parliament.png", 
       isDone:false,
-      title:"ქუთაისის პარლამენტილი"
+      title:"ქუთაისის პარლამენტი"
   },
   {
       url:"./images/parliament.png", 
       isDone:true,
-      title:"ქუთაისის პარლამენტილი"
+      title:"ქუთაისის პარლამენტი"
   },
   {
     url:"./images/parliament.png", 
     isDone:true,
-    title:"ქუთაისის პარლამენტილი"
+    title:"ქუთაისის პარლამენტი"
 },
 {
   url:"./images/parliament.png", 
   isDone:true,
-  title:"ქუთაისის პარლამენტილი"
+  title:"ქუთაისის პარლამენტი"
 },
 {
 url:"./images/parliament.png", 
 isDone:true,
-title:"ქუთაისის პარლამენტილი"
+title:"ქუთაისის პარლამენტი"
 },
 {
 url:"./images/parliament.png", 
 isDone:true,
-title:"ქუთაისის პარლამენტილი"
+title:"ქუთაისის პარლამენტი"
 },
 {
 url:"./images/parliament.png", 
 isDone:true,
-title:"ქუთაისის პარლამენტილი"
+title:"ქუთაისის პარლამენტი"
 },
 {
 url:"./images/parliament.png", 
@@ -76,6 +77,11 @@ title:"ქუთაისის პარლამენტი"
     }
   });
 console.log(filteredProjects)
+const buttonStyle = {
+  all: filter === 'all' ? { backgroundColor: ' #F58634' } : {},
+  inProgress: filter === 'inProgress' ? { backgroundColor: '#F58634' } : {},
+  completed: filter === 'completed' ? { backgroundColor: '#F58634' } : {},
+};
   return (
     <main>
       <section className="ourprojects">
@@ -88,9 +94,9 @@ console.log(filteredProjects)
         </h2>
         </div>
         <div className="buttons">
-          <button onClick={() => setFilter('all')}>ყველა პროექტი</button>
-          <button onClick={() => setFilter('inProgress')}>მიმდინარე</button>
-          <button onClick={() => setFilter('completed')}>დასრულებული</button>
+          <button onClick={() => setFilter('all')} style={buttonStyle.all} >ყველა პროექტი</button>
+          <button onClick={() => setFilter('inProgress')} style={buttonStyle.inProgress}>მიმდინარე</button>
+          <button onClick={() => setFilter('completed')} style={buttonStyle.completed}>დასრულებული</button>
         </div>
       </section>
 
