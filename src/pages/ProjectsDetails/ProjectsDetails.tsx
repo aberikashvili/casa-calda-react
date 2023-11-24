@@ -58,11 +58,14 @@ const handleScroll = (scrollOffset:number) => {
   if (newScrollPosition<0){
     newScrollPosition=0
   }
+  if (newScrollPosition>1700){
+    newScrollPosition=1700
+  }
   scrollContainerRef.current.scrollLeft = newScrollPosition;
   }
   setScrollPosition(newScrollPosition);
   
-  console.log(scrollContainerRef.current)
+  
 };
 
     return (
@@ -129,13 +132,7 @@ const handleScroll = (scrollOffset:number) => {
           <div className="item item-4"></div>
           <div className="item item-5"></div>
        </div>
-       <div className="gridcontainer">
-          <div className="item item-1"></div>
-          <div className="item item-2"></div>
-          <div className="item item-3"></div>
-          <div className="item item-4"></div>
-          <div className="item item-5"></div>
-       </div>
+       
        </section> 
        <section className="other-projects">
        

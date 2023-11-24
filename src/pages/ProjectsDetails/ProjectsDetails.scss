@@ -1,3 +1,11 @@
+main{
+  // display: flex;
+  // flex-direction: column;
+  // align-items:center;
+  
+ max-width: 2100px;
+ 
+}
 .project-details{
   margin-top: 19px;
   @media screen and (min-width: 768px) {
@@ -42,7 +50,7 @@
     height: 322px;
     flex-shrink: 0;
     @media screen and (min-width: 768px) {
-      width:1920px;
+      width:2076px;
       height: 841px;
       margin-top: 20px;
       flex-shrink: 0;
@@ -247,7 +255,7 @@
   @media screen and (min-width: 768px) {
     margin-top: 200px;
     margin-left: 160px;
-    
+    width:1610px;
   }.otherprojects-h1{
     display: flex;
     align-items: center;
@@ -259,6 +267,7 @@
       height: 40px;
     }
   }
+  
   .arrows{
     display: none;
     @media screen and (min-width: 768px) {
@@ -266,12 +275,13 @@
       
     }}
   .slider-containers{
+    overflow-x: scroll;
     @media screen and (min-width: 768px) {
       margin-top: 24px;
       display: flex;
       scroll-behavior: smooth;
       gap: 20px;
-      overflow-x: scroll;
+     
   }}
   h1{
     width: 164px;
@@ -330,8 +340,6 @@
     }
   }
 }
-
-
 
 
 
