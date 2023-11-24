@@ -3,25 +3,44 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  justify-content:center;
+  margin: auto;
   @media screen and (min-width: 768px) {
-  display:block;
-  padding-left: 160px;
-  padding-right: 160px;
+  // margin-left: 160px;
+  padding-left: 80px;
+  // padding-right: 160px;
   max-width: 1920px;
   
   }
-  
+  @media screen and (min-width: 1200px) {
+    padding-left: 160px;
+   
+  }
 }
 .ourprojects{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+  width: 100%;
+
   
-  
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    width: 1700px;
+  @media screen and (min-width: 1156px) {
     
+    display: flex;
+    flex-direction: row;
+    // align-items:sp;
+    max-width: 800px;
+    
+    }
+    @media screen and (min-width: 1456px) {
+      display:flex;
+      flex-direction: row;
+      max-width: 1200px
+     
+    }
+    @media screen and (min-width: 1875px) {
+      max-width: 1600px
     }
 }
 .ourprojects-h{
@@ -62,7 +81,7 @@ main {
   font-weight: 500;
   line-height: 150%;
   @media screen and (min-width: 768px) {
-    width: 790px;
+    max-width: 790px;
     height: 42px;
     margin-top: 20px;
     font-size: 14px;
@@ -75,6 +94,7 @@ main {
   margin-top: 20px;
   display: inline-flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 12px;
   @media screen and (min-width: 768px) {
     margin-top: 80px;
@@ -102,17 +122,21 @@ main {
   }
 }
 .projects-gallery{
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
   
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
+    
     gap: 20px;
-    width: 1920px;
+    padding-left: 40px;
+    max-width: 1920px;
   }
  img {
   width: 343px;
