@@ -76,7 +76,7 @@ title:"ქუთაისის პარლამენტი"
       return item.isDone;
     }
   });
-console.log(filteredProjects)
+
 const buttonStyle = {
   all: filter === 'all' ? { backgroundColor: ' #F58634' } : {},
   inProgress: filter === 'inProgress' ? { backgroundColor: '#F58634' } : {},
