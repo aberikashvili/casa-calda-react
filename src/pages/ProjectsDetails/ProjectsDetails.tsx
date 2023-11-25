@@ -58,14 +58,11 @@ const handleScroll = (scrollOffset:number) => {
   if (newScrollPosition<0){
     newScrollPosition=0
   }
-  if (newScrollPosition>1700){
-    newScrollPosition=1700
-  }
   scrollContainerRef.current.scrollLeft = newScrollPosition;
   }
   setScrollPosition(newScrollPosition);
   
-  
+  console.log(scrollContainerRef.current)
 };
 
     return (
