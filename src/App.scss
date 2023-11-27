@@ -1,42 +1,326 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@use './assets/mixins';
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .Header{
+        display: none;
+    }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+    .NeedHelpB{
+        display: flex;
+        flex-direction: row;
+        padding-left: 10rem;
+        justify-content: space-between;
+        padding-top: 10rem;
+            h2{
+                font-size: 2rem;
+            }
+            .firsttwo{
+                padding-top: 5.3rem;
+                p{
+                    width: 49.375rem;
+                }
+            }
+            .Form{
+                padding-left: 10rem;
+                form{
+                    .two{
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    button{
+                        margin-top: 3rem;
+                        width: 7.938rem;
+                    }
+                }
+            }
+    }
+
+    .WTSAboutUsB{
+        padding-left: 10rem;
+        .WebWTS{
+            display: inline-block;
+        }
+        .GrayB{
+            display: none;
+        }
+        .Mobile{
+            display: none;
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+    .PrizesB{
+        margin-top: 12rem;
+        margin-left: 10rem;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-between;
+        padding: 0;
+        .header{
+            padding-top: 11rem;
+            display: flex;
+            gap: 2rem;
+            p{
+                width: 40.938rem;
+            }
+            h2{
+                font-size: 2rem;
+            }
+            button{
+                margin-top: 0;
+            }
+        }
+        .PrizeImgs{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            overflow: hidden;
+            max-width: 62.5rem;
+            margin-left: 10rem;
+            max-height: 40rem;
+            .MobPic{
+                display: none;
+            }
+            .new{
+                width: 9.375rem;
+            }
+            img{
+                width: 15.625rem;
+                box-sizing:border-box;
+                max-height: 250px;
+            }
+            .Uppic{
+                    box-sizing: border-box;
+                    margin-bottom: 6rem;
+                }
+        }
+        .forWeb{
+            display: inline-block;
+            width: 8.875rem;
+        }
+        .forMob{
+            display: none;
+        }
+        .WebPic{
+            display: flex;
+        }
+    }
+
+    .PartnersB{
+        margin-left: 10rem;
+        width: 100rem;
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 2rem;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+                p{
+                    width: 750px;
+                }
+        }
+        .PartnerImgs{
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                width: 15.625rem;
+            }
+        }
+        .MobBlue{
+            display: none;
+        }
+        .WebBlue{
+            display: inline-block;
+            width: 8.875rem;
+        }
+        .WebPic{
+            display: inline-block;
+        }
+    }
+
+    .Bservices{
+        margin-top: 10rem;
+        overflow: hidden;
+        .Scarousel{
+            .SliderMob{
+                display: none;
+            };
+
+            .slider-container {
+                display: flex;
+                gap: 2rem;
+                margin-left: 10rem;
+                position: relative;
+                overflow: hidden;
+
+                .slider {
+                    min-width: 24.063rem;
+                    transition: transform 0.5s ease; 
+                }
+                
+                .bullets{
+                    display: none;
+                }
+            }
+            p{
+                padding-top: 1rem;
+                padding-left: 9rem;
+                width: 49.375rem;
+            };
+
+            .Oservices{
+                padding: 0 9rem;
+                    h2{
+                        font-size: 36px;
+                    }
+                    img{
+                        width: 2.25rem;
+                        position: relative;
+                        bottom: -4rem;
+                    }
+            };
+        }
+    }
+
+    .Pbody{
+        padding: 10rem;
+        .slide{
+            display: flex;
+            flex-direction: row;
+            max-height: 586px;
+            position: relative;
+            overflow: hidden;
+                img{
+                    min-width: 57.813rem; // Adjust this value according to your design
+                    max-width: 100%;
+                    height: auto;
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    width: 625px;
+                    .SecondGray{
+                        display: block;
+                        @include mixins.GrayText;
+                        padding-top: 0.5rem;
+                    }
+                    .Descrip{
+                        font-size: 1rem;
+                    }
+                    .Orange{
+                        width: 11.625rem;
+                        margin-top: 1rem;
+                    }
+                    .ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        h4{
+                            color: rgba(36, 90, 163, 1);
+                            font-weight: 700;
+                        }
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            gap: 1rem;
+                            list-style: none; 
+                            max-height: 180px;
+                            li{
+                                width: 240px;
+                                &::before {
+                                content: '\2022';
+                                color: rgba(245, 134, 52, 1);
+                                margin-right: 0.5em; 
+                                font-size: 1rem;
+                                font-family: Avenir Next Georgian;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 21px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                }
+                        }
+                    }
+                    }
+                    .StatusTitle{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                            .status{
+                                font-size: 1rem;
+                            }
+                            .title{
+                                font-size: 2.25rem;
+                            }
+                    }
+                }
+        }
+        .Oprojects{
+            img{
+                width: 2.5rem;
+            }
+            .Mobile{
+                display: none;
+            }
+            .Web{
+                display: flex;
+                font-size: 2.25rem;
+            }
+        }
+    }
+
+    .Main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: 10rem;
+        gap: 10rem;
+        padding: 0;
+            img{
+                width: 680px;
+            }
+            .MainB{
+                padding-left: 10rem;
+                h2{
+                    font-size: 4rem;
+                }
+                p{
+                    @include mixins.GrayText;
+                    padding-top: 3rem;
+                    width: 925px;
+                }
+                .Abody{
+                    border-top: 1px solid rgba(20, 20, 20, 0.1);
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin-top: 5rem;
+                    margin-left: -2rem;
+                    padding-top: 3rem;
+                        .Ainfo{
+                            display: flex;
+                            gap: 0.5rem;
+                            .Num{
+                               font-size: 3rem; 
+                            }
+                        }
+                }
+            }
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  @media screen and (min-width: 375px) and (max-width: 700px) {
+    .HeaderTwo{
+        display: none;
+    }
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}

@@ -1,0 +1,111 @@
+@use '../../../assets/mixins';
+
+.Bservices{
+    padding: 2rem 1rem ;
+    .Scarousel{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .Oservices{
+            display: flex;
+            justify-content: space-between;
+            h2{
+                font-family: Avenir Next Georgian;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 27px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            .Abuttons{
+                display: flex;
+                gap: 2rem;
+            }
+        }
+        .Gtext{
+            @include mixins.GrayText;
+            font-size: 13px;
+            height: 5rem;
+            color: rgba(20, 20, 20, 0.6);
+        }
+        .slider-container{
+            display: none;
+        }
+        .slider{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .bullets {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+          
+                span {
+                  width: 0.5rem;
+                  height: 0.5rem;
+                  margin: 0 5px;
+                  background-color: #ebebeb;
+                  border-radius: 50%;
+                  display: inline-block;
+                  cursor: pointer;
+          
+                  &.active {
+                    background-color: white;
+                    position: relative;
+                    border: 1px solid rgba(245, 134, 52, 1);
+                    &::before {
+                        content: "";
+                        width: 0.19rem;
+                        height: 0.19rem;
+                        background-color: rgba(245, 134, 52, 1);
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                      }
+                  }
+                }
+              }
+            .first{
+                background: rgba(249, 249, 249, 1);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0 1rem 1rem;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                list-style: none; 
+                li{
+                    &::before {
+                    content: '\2022';
+                    color: rgba(245, 134, 52, 1);
+                    margin-right: 0.5em; 
+                    font-size: 1rem;
+                    font-family: Avenir Next Georgian;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    }
+            }
+        }
+    }}
+    .SlidersTitle{
+        @include mixins.SmallerBold;
+        font-size: 14px;
+    }
+    .SlidersLi{
+        font-family: Avenir Next Georgian;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
