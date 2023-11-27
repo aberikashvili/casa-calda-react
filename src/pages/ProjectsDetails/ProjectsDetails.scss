@@ -245,9 +245,9 @@ main{
   margin-top: 40px;
   @media screen and (min-width: 768px) {
     margin-top: 180px;
-    margin-left: 60px;
+    margin-left:60px;
     width: auto;
-    // background-color: #F58634;
+    
   }
   @media screen and (min-width: 992px) {
     margin-left: 80px;
@@ -292,20 +292,48 @@ main{
     @media screen and (min-width: 950px) {
       width: 770px;
     }
+    @media screen and (min-width: 992px) {
+      width: 810px;
+    }
     @media screen and (min-width: 1050px) {
+      width: 850px;
+    }
+    @media screen and (min-width: 1130px) {
+      width: 890px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+      width: 960px;
+    }
+    @media screen and (min-width: 1280px) {
       width: 1000px;
     }
-    @media screen and (min-width: 992px) {
-      width: 800px;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 950px;
+    @media screen and (min-width: 1320px) {
+      width: 1040px;
     }
     @media screen and (min-width: 1400px) {
       width: 1070px;
     }
+    @media screen and (min-width: 1450px) {
+      width: 1110px;
+    }
+    @media screen and (min-width: 1520px) {
+      width: 1190px;
+    }
+    @media screen and (min-width: 1600px) {
+      width: 1270px;
+    }
+    @media screen and (min-width: 1700px) {
+      width: 1340px;
+    }
+    @media screen and (min-width: 1800px) {
+      width: 1410px;
+    }
+    @media screen and (min-width: 1900px) {
+      width: 1490px;
+    }
     @media screen and (min-width: 2020px) {
-      width: 1570px;
+      width: 1580px;
     }
   }
   .arrow{
@@ -403,7 +431,7 @@ main{
     @media screen and (min-width: 2020px) {
       grid-template-columns: 385px 385px 655px 385px;
       grid-template-rows:385px 385px ;
-      margin-top:24px;
+      // margin-top:24px;
     }
     
 .item{
