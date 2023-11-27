@@ -69,8 +69,10 @@ const handleScroll = (scrollOffset:number) => {
      <main >
       
       <section className="project-details">
+        <div className="projectdetails-h">
         <h1 >ახალციხე სმარტი</h1>
         <h2>დასრულებულია</h2>
+        </div>
         <div className="image-div">
         <img src={Image} alt="SmartImage" className="Smart" />
         
