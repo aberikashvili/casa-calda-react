@@ -89,12 +89,12 @@ const buttonStyle = {
         <h1 className='ourprojects-h1'>ჩვენი პროექტები</h1>
         <h2 className='ourprojects-h2'>
           შემთხვევით გენერირებული ტექსტი ეხმარება დიზაინერებს და ტიპოგრაფიული ნაწარმის
-          შემქმნელებს,<br />
+          შემქმნელებს,
           რეალურთან მაქსიმალურად მიახლოებული შაბლონი წარუდგინონ შემფასებელს
         </h2>
         </div>
         <div className="buttons">
-          <button onClick={() => setFilter('all')} style={buttonStyle.all} >ყველა პროექტი</button>
+          <button onClick={() => setFilter('all')} style={buttonStyle.all} >ყველა</button>
           <button onClick={() => setFilter('inProgress')} style={buttonStyle.inProgress}>მიმდინარე</button>
           <button onClick={() => setFilter('completed')} style={buttonStyle.completed}>დასრულებული</button>
         </div>
