@@ -21,13 +21,15 @@
         }
         .Form{
             background: white;
-            width: 100%;
             padding: 1rem;
                 form{
                     display: flex;
                     flex-direction: column;
                     width: 90%;
                     gap: 1.5rem;
+                        label{
+                            width: 18.938rem;
+                        }
                         .two{
                             display: flex;
                             flex-direction: column;

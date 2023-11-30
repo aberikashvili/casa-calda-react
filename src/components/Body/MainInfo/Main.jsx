@@ -1,10 +1,14 @@
 import MainImage from '../../../Imgs/Main.png'
+import Ukure from '../../../Imgs/Ukure.png'
 import './main.scss'
 
 export default function Main() {
     return(
         <div className="Main">
-            <img src={MainImage} alt="Example Picture" className='MainImg'/>
+            <div className="Video">
+                <img src={Ukure} className='Ukure' alt="Ukure" />
+                <img src={MainImage} alt="Example Picture" className='MainImg'/>
+            </div>
             <div className="MainB">
                 <h2>თბილი სახლი</h2>
                 <p>ევროპის, აზიისა და ამერიკის კონტინენტზე მოქმედი ცნობილი კომპანიების საიმედო პარტნიორია და კლიენტებს სთავაზობს, 
