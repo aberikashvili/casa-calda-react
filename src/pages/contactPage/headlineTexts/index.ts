@@ -1,0 +1,1 @@
+export { HeadlineTexts } from "./headlineText";

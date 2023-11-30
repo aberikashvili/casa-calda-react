@@ -1,0 +1,1 @@
+export { FrameText } from "./frameText";

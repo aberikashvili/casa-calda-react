@@ -1,0 +1,1 @@
+export { FourOhFourPage } from "./fourOhFourPage";
