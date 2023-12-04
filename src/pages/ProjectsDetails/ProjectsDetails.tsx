@@ -58,13 +58,34 @@ const handleScroll = (scrollOffset:number) => {
   if (newScrollPosition<0){
     newScrollPosition=0
   }
+  if (newScrollPosition>2500){
+    newScrollPosition=2500
+  }
   scrollContainerRef.current.scrollLeft = newScrollPosition;
   }
   setScrollPosition(newScrollPosition);
   
   console.log(scrollContainerRef.current)
 };
+const [scrollPosition1, setScrollPosition1] = useState(0);
+const scrollContainerRef1 = useRef<HTMLDivElement>(null);
 
+const handleScroll1 = (scrollOffset:number) => {
+  let newScrollPosition = scrollPosition1 + scrollOffset;
+  if(scrollContainerRef1?.current){
+
+  if (newScrollPosition<0){
+    newScrollPosition=0
+  }
+  if (newScrollPosition>2500){
+    newScrollPosition=2500
+  }
+  scrollContainerRef1.current.scrollLeft = newScrollPosition;
+  }
+  setScrollPosition1(newScrollPosition);
+  
+  console.log(scrollContainerRef.current)
+};
     return (
      <main >
       
@@ -116,20 +137,23 @@ const handleScroll = (scrollOffset:number) => {
       <div className="gallery-h1">
         <h1>ფოტო გალერეა</h1>
         <div className="arrows">
-          <button>
+          <button onClick={()=>handleScroll1(-100)}>
         <img src={ImageA} alt="ArrowImage" className="arrow" />
         </button>
-        <button>
+        <button onClick={()=>handleScroll1(100)}>
         <img src={ImageB} alt="ArrowImage"  className="arrow"/>
         </button>
         </div>
         </div>
+        <div className='grids' ref={scrollContainerRef1}>
         <div className="gridcontainer">
           <div className="item item-1"></div>
           <div className="item item-2"></div>
           <div className="item item-3"></div>
           <div className="item item-4"></div>
           <div className="item item-5"></div>
+       </div>
+       
        </div>
        
        </section> 
