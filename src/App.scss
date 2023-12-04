@@ -736,7 +736,83 @@
     }
   }
 
-  @media screen and (min-width: 375px) and (max-width: 700px) {
+  @media screen and (min-width: 901px) and (max-width: 1440px){
+    .HeaderTwo{
+        display: none;
+    }
+    .Burger-button{
+        right: 4%;
+    }
+    .Main{
+        .Video{
+            position: relative;
+            margin-left: 2.5%;
+            padding-top: 2rem;
+            .MainImg{
+                width: 95%;
+            }
+            .Ukure{
+                display: inline-block;
+                width: 8rem;
+                height: 8rem;
+                position: absolute;
+                top: -1rem;
+                left: -4%;
+                cursor: pointer;
+            }
+        }
+        .MainB{
+            margin-left: 2.5%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            h2{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                font-size: 4rem;
+            }
+            .Abody{
+                flex-wrap: nowrap;
+                .Num{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    .Bservices{
+        margin-top: 5rem;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .Pbody{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .PartnersB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .PrizesB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .WTSAboutUsB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .NeedHelpB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+  }
+
+  @media screen and (min-width: 553px) and (max-width: 900px){
+    .Burger-button{
+        right: 2%;
+    }
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 900px) {
     .HeaderTwo{
         display: none;
     }

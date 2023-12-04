@@ -26,6 +26,9 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    .burgerdiv{
+        width: 50%;
+    }
     .CasaLogo{
         cursor: pointer;
     }
