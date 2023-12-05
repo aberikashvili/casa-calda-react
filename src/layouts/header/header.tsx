@@ -47,7 +47,7 @@ export function Header() {
           />
         )}
       </div>
-      <div className={`s:hidden lgg:flex ${display ? "flex" : "hidden"}`}>
+      <div className="s:hidden lgg:flex">
         <NavBar display={display} setDisplay={setDisplay} />
       </div>
       {display && (
