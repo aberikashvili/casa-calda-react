@@ -1,0 +1,75 @@
+@use '../../../assets/mixins';
+
+.WTSAboutUsB{
+    padding: 1rem;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+        .WebWTS{
+            display: none;
+        }
+        .bullets {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+    
+            span {
+            width: 0.5rem;
+            height: 0.5rem;
+            margin: 0 5px;
+            background-color: #ebebeb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+    
+            &.active {
+                background-color: white;
+                position: relative;
+                border: 1px solid rgba(245, 134, 52, 1);
+                &::before {
+                    content: "";
+                    width: 0.19rem;
+                    height: 0.19rem;
+                    background-color: rgba(245, 134, 52, 1);
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            }
+        }
+        h2{
+            @include mixins.SmallerBold;
+        }
+        .GrayB{
+            background: rgba(20, 20, 20, 0.03);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-top: 2rem;
+                p{
+                    @include mixins.GrayText;
+                }
+                .WTSside{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                        img{
+                            width: 3.75rem;
+                            height: 3.75rem;
+                            background-color: gray;
+                            border-radius: 50%;
+                        }
+                        .WTSinfo{
+                            .blueN{
+                                color: rgba(36, 90, 163, 1);
+                                font-weight: 700;
+                            }
+                        }
+                }
+        }
+}

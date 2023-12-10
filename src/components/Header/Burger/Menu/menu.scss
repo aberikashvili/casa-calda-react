@@ -1,0 +1,33 @@
+@use '../../../../assets/mixins';
+
+.body{
+    display: block;
+    position: relative;
+    right: 230%;
+    top: 6rem;
+    .Menu-items{
+        list-style: none;
+        width: 7.75rem;
+        height: 15.375rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        li{
+            font-family: Avenir Next Georgian;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.3rem;
+            letter-spacing: 0em;
+            text-align: left;
+            cursor: pointer;
+            &:hover{
+                color: #245AA3;
+            }
+        }
+    }
+    .Orange{
+        @include mixins.OrangeBttn;
+        top: 7rem;
+        right: 7.45rem;
+    }
+}

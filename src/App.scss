@@ -1,42 +1,820 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@use './assets/mixins';
+
+@media screen and (min-width: 1921px) {
+    .Header{
+        display: none;
+    }
+    .HeaderTwo{
+        justify-content: space-between;
+        ul{
+            gap: 2rem;
+        }
+        .CasaLogoTwo{
+            max-width: 11.25rem;
+        }
+    }
+    .NeedHelpB{
+        display: flex;
+        flex-direction: row;
+        padding-left: 13rem;
+        justify-content: space-between;
+        padding-top: 10rem;
+            h2{
+                font-size: 2rem;
+            }
+            .firsttwo{
+                padding-top: 5.3rem;
+                p{
+                    width: 49.375rem;
+                }
+            }
+            .Form{
+                padding-left: 10rem;
+                form{
+                    .two{
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    button{
+                        margin-top: 3rem;
+                        width: 7.938rem;
+                    }
+                }
+            }
+    }
+
+    .WTSAboutUsB{
+        padding-left: 13rem;
+        .WebWTS{
+            display: inline-block;
+        }
+        .GrayB{
+            display: none;
+        }
+        .Mobile{
+            display: none;
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+    .PrizesB{
+        margin-top: 12rem;
+        margin-left: 13rem;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-between;
+        padding: 0;
+        .header{
+            padding-top: 11rem;
+            display: flex;
+            gap: 2rem;
+            p{
+                width: 40.938rem;
+            }
+            h2{
+                font-size: 2rem;
+            }
+            button{
+                margin-top: 0;
+            }
+        }
+        .PrizeImgs{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            overflow: hidden;
+            max-width: 62.5rem;
+            margin-left: 13rem;
+            max-height: 40rem;
+            .MobPic{
+                display: none;
+            }
+            .new{
+                width: 9.375rem;
+            }
+            img{
+                width: 15.625rem;
+                box-sizing:border-box;
+                max-height: 250px;
+            }
+            .Uppic{
+                    box-sizing: border-box;
+                    margin-bottom: 6rem;
+                }
+        }
+        .forWeb{
+            display: inline-block;
+            width: 8.875rem;
+        }
+        .forMob{
+            display: none;
+        }
+        .WebPic{
+            display: flex;
+        }
+    }
+
+    .PartnersB{
+        margin-left: 13rem;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 2rem;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+                p{
+                    width: 750px;
+                }
+        }
+        .PartnerImgs{
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                width: 15.625rem;
+            }
+        }
+        .MobBlue{
+            display: none;
+        }
+        .WebBlue{
+            display: inline-block;
+            width: 8.875rem;
+        }
+        .WebPic{
+            display: inline-block;
+        }
+    }
+
+    .Bservices{
+        margin-top: 10rem;
+        overflow: hidden;
+        .Scarousel{
+            margin-left: 3rem;
+            .SliderMob{
+                display: none;
+            };
+
+            .slider-container {
+                display: flex;
+                gap: 2rem;
+                margin-left: 13rem;
+                position: relative;
+                overflow: hidden;
+
+                .slider {
+                    min-width: 24.063rem;
+                    transition: transform 0.5s ease; 
+                }
+                
+                .bullets{
+                    display: none;
+                }
+            }
+            p{
+                padding-top: 1rem;
+                padding-left: 9rem;
+                width: 49.375rem;
+            };
+
+            .Oservices{
+                padding: 0 9rem;
+                    h2{
+                        font-size: 36px;
+                    }
+                    img{
+                        width: 2.25rem;
+                        position: relative;
+                        bottom: -4rem;
+                    }
+            };
+        }
+    }
+
+    .Pbody{
+        padding: 13rem;
+        padding-right: 9rem;
+        .slide{
+            display: flex;
+            flex-direction: row;
+            max-height: 586px;
+            position: relative;
+            overflow: hidden;
+                img{
+                    min-width: 57.813rem; 
+                    max-width: 100%;
+                    height: auto;
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    width: 625px;
+                    .SecondGray{
+                        display: block;
+                        @include mixins.GrayText;
+                        padding-top: 0.5rem;
+                    }
+                    .Descrip{
+                        font-size: 1rem;
+                    }
+                    .Orange{
+                        width: 11.625rem;
+                        margin-top: 1rem;
+                    }
+                    .ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        h4{
+                            color: rgba(36, 90, 163, 1);
+                            font-weight: 700;
+                        }
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            gap: 1rem;
+                            list-style: none; 
+                            max-height: 180px;
+                            li{
+                                width: 240px;
+                                &::before {
+                                content: '\2022';
+                                color: rgba(245, 134, 52, 1);
+                                margin-right: 0.5em; 
+                                font-size: 1rem;
+                                font-family: Avenir Next Georgian;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 21px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                }
+                        }
+                    }
+                    }
+                    .StatusTitle{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                            .status{
+                                font-size: 1rem;
+                            }
+                            .title{
+                                font-size: 2.25rem;
+                            }
+                    }
+                }
+        }
+        .Oprojects{
+            img{
+                width: 2.5rem;
+            }
+            .Mobile{
+                display: none;
+            }
+            .Web{
+                display: flex;
+                font-size: 2.25rem;
+            }
+        }
+    }
+
+    .Main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: 10rem;
+        gap: 10rem;
+        padding: 0;
+        position: relative;
+        .Video{
+            position: relative;
+        }
+            .Ukure{
+                display: inline-block;
+                width: 12.5rem;
+                height: 12.5rem;
+                position: absolute;
+                left:-15%;
+                top: -5rem;
+                cursor: pointer;
+            }
+            .MainImg{
+                width: 100%;
+                min-width: 42.5rem;
+            }
+            .MainB{
+                padding-left: 13rem;
+                h2{
+                    font-size: 4rem;
+                }
+                p{
+                    @include mixins.GrayText;
+                    padding-top: 3rem;
+                    width: 925px;
+                }
+                .Abody{
+                    border-top: 1px solid rgba(20, 20, 20, 0.1);
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin-top: 5rem;
+                    margin-left: -2rem;
+                    padding-top: 3rem;
+                        .Ainfo{
+                            display: flex;
+                            gap: 0.5rem;
+                            .Num{
+                               font-size: 3rem; 
+                            }
+                        }
+                }
+            }
+    }
+};
+@media screen and (min-width: 1441px) and (max-width: 1540px){
+    .HeaderTwo{
+        padding: 0.5rem 5rem;
+    }
+    .Wbody{
+        .Main{
+            .MainB{
+                padding-left: 5rem;
+            }
+        }
+        .Bservices{
+            .Scarousel{
+                .Oservices{
+                    padding-left: 4.5rem;
+                }
+                .Gtext{
+                    padding-left: 4.5rem;
+                }
+                .slider-container{
+                    margin-left: 5rem;
+                }
+            }
+        }
+        .Pbody{
+            padding-left: 5rem;
+        }
+        .PartnersB{
+            margin-left: 5rem;
+        }
+        .PrizesB{
+            margin-left: 5rem;
+        }
+        .WTSAboutUsB{
+            padding-left: 5rem;
+            .WebWTS{
+                padding-left: 10rem;
+            }
+        }
+        .NeedHelpB{
+            padding-left: 5rem;
+        }
+    }
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@media screen and (min-width: 1441px) and (max-width: 1921px) {
+    .Header{
+        display: none;
+    }
+    .HeaderTwo{
+        justify-content: space-between;
+        ul{
+            gap: 2rem;
+        }
+        .BandT{
+        margin-left: 0;
+        }
+    }
+    .NeedHelpB{
+        display: flex;
+        flex-direction: row;
+        padding-left: 10rem;
+        justify-content: space-between;
+        padding-top: 10rem;
+            h2{
+                font-size: 2rem;
+            }
+            .firsttwo{
+                padding-top: 5.3rem;
+                p{
+                    max-width: 49.375rem;
+                }
+            }
+            .Form{
+                padding-left: 10rem;
+                form{
+                    .two{
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    button{
+                        margin-top: 3rem;
+                        max-width: 7.938rem;
+                    }
+                }
+            }
+    }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+    .WTSAboutUsB{
+        overflow: hidden;
+        width: 100%;
+        padding-left: 10rem;
+        .WebWTS{
+            display: inline-block;
+        }
+        .GrayB{
+            display: none;
+        }
+        .Mobile{
+            display: none;
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+    .PrizesB{
+        margin-top: 12rem;
+        margin-left: 10rem;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-between;
+        padding: 0;
+        .header{
+            padding-top: 11rem;
+            display: flex;
+            gap: 2rem;
+            p{
+                width: 40.938rem;
+            }
+            h2{
+                font-size: 2rem;
+            }
+            button{
+                margin-top: 0;
+            }
+        }
+        .PrizeImgs{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            overflow: hidden;
+            max-width: 62.5rem;
+            margin-left: 10rem;
+            max-height: 40rem;
+            .MobPic{
+                display: none;
+            }
+            .new{
+                width: 9.375rem;
+            }
+            img{
+                width: 15.625rem;
+                box-sizing:border-box;
+                max-height: 250px;
+            }
+            .Uppic{
+                    box-sizing: border-box;
+                    margin-bottom: 6rem;
+                }
+        }
+        .forWeb{
+            display: inline-block;
+            width: 8.875rem;
+        }
+        .forMob{
+            display: none;
+        }
+        .WebPic{
+            display: flex;
+        }
+    }
+
+    .PartnersB{
+        margin-left: 10rem;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 2rem;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+                p{
+                    width: 750px;
+                }
+        }
+        .PartnerImgs{
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                width: 15.625rem;
+            }
+        }
+        .MobBlue{
+            display: none;
+        }
+        .WebBlue{
+            display: inline-block;
+            width: 8.875rem;
+        }
+        .WebPic{
+            display: inline-block;
+        }
+    }
+
+    .Bservices{
+        margin-top: 10rem;
+        overflow: hidden;
+        .Scarousel{
+            .SliderMob{
+                display: none;
+            };
+
+            .slider-container {
+                display: flex;
+                gap: 2rem;
+                margin-left: 10rem;
+                position: relative;
+                overflow: hidden;
+
+                .slider {
+                    min-width: 24.063rem;
+                    transition: transform 0.5s ease; 
+                }
+                
+                .bullets{
+                    display: none;
+                }
+            }
+            p{
+                padding-top: 1rem;
+                padding-left: 9rem;
+                width: 49.375rem;
+            };
+
+            .Oservices{
+                padding: 0 9rem;
+                    h2{
+                        font-size: 36px;
+                    }
+                    img{
+                        width: 2.25rem;
+                        position: relative;
+                        bottom: -4rem;
+                    }
+            };
+        }
+    }
+
+    .Pbody{
+        padding: 10rem;
+        padding-right: 1rem;
+        width: 100%;
+        .Oprojects{
+            padding-right: 10rem;
+            padding-bottom: 1rem;
+        }
+        .slide{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            overflow: hidden;
+                img{
+                    width: 60%;
+                    max-width: 57.813rem;
+                    height: auto;
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    width: 40%;
+                    .SecondGray{
+                        display: block;
+                        @include mixins.GrayText;
+                        padding-top: 0.5rem;
+                    }
+                    .Descrip{
+                        font-size: 1rem;
+                    }
+                    .Orange{
+                        width: 11.625rem;
+                        margin-top: 1rem;
+                    }
+                    .ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        h4{
+                            color: rgba(36, 90, 163, 1);
+                            font-weight: 700;
+                        }
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            gap: 1rem;
+                            list-style: none; 
+                            max-height: 180px;
+                            li{
+                                width: 240px;
+                                &::before {
+                                content: '\2022';
+                                color: rgba(245, 134, 52, 1);
+                                margin-right: 0.5em; 
+                                font-size: 1rem;
+                                font-family: Avenir Next Georgian;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 21px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                }
+                        }
+                    }
+                    }
+                    .StatusTitle{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                            .status{
+                                font-size: 1rem;
+                            }
+                            .title{
+                                font-size: 2.25rem;
+                            }
+                    }
+                }
+        }
+        .Oprojects{
+            img{
+                width: 2.5rem;
+            }
+            .Mobile{
+                display: none;
+            }
+            .Web{
+                display: flex;
+                font-size: 2.25rem;
+            }
+        }
+    }
+
+    .Main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: 10rem;
+        gap: 10rem;
+        padding: 0;
+        position: relative;
+            .Video{
+                position: relative;
+                width: 50%;
+                max-width: 42.5rem;;
+            }
+            .Ukure{
+                display: inline-block;
+                width: 12.5rem;
+                height: 12.5rem;
+                position: absolute;
+                left: -15%;
+                top: -5rem;
+                cursor: pointer;
+            }
+            .MainImg{
+                width: 100%;
+                min-width: 42.5rem;
+            }
+            .MainB{
+                width: 50%;
+                padding-left: 10rem;
+                h2{
+                    font-size: 4rem;
+                }
+                p{
+                    @include mixins.GrayText;
+                    padding-top: 3rem;
+                    width: 100%
+                }
+                .Abody{
+                    border-top: 1px solid rgba(20, 20, 20, 0.1);
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin-top: 5rem;
+                    margin-left: -2rem;
+                    padding-top: 3rem;
+                        .Ainfo{
+                            display: flex;
+                            gap: 0.5rem;
+                            .Num{
+                               font-size: 3rem; 
+                            }
+                        }
+                }
+            }
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  @media screen and (min-width: 901px) and (max-width: 1440px){
+    .HeaderTwo{
+        display: none;
+    }
+    .Burger-button{
+        right: 4%;
+    }
+    .Main{
+        .Video{
+            position: relative;
+            margin-left: 2.5%;
+            padding-top: 2rem;
+            .MainImg{
+                width: 95%;
+            }
+            .Ukure{
+                display: inline-block;
+                width: 8rem;
+                height: 8rem;
+                position: absolute;
+                top: -1rem;
+                left: -4%;
+                cursor: pointer;
+            }
+        }
+        .MainB{
+            margin-left: 2.5%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            h2{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                font-size: 4rem;
+            }
+            .Abody{
+                flex-wrap: nowrap;
+                .Num{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    .Bservices{
+        margin-top: 5rem;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .Pbody{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .PartnersB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .PrizesB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .WTSAboutUsB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .NeedHelpB{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  @media screen and (min-width: 553px) and (max-width: 900px){
+    .Burger-button{
+        right: 2%;
+    }
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  @media screen and (min-width: 375px) and (max-width: 900px) {
+    .HeaderTwo{
+        display: none;
+    }
+  }

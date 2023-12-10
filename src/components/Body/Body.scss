@@ -1,0 +1,14 @@
+.Wbody{
+    position: relative;
+    .background-image {
+        position: absolute;
+        top: 15rem;
+        left: 0;
+        width: 100%;
+        z-index: -1; 
+        img{
+            width: 10rem;
+            height: 35rem;
+        }
+    }
+}

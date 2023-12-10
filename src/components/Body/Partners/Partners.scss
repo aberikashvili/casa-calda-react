@@ -1,0 +1,35 @@
+@use '../../../assets/mixins';
+
+.PartnersB{
+    display: flex;
+    flex-direction: column;
+    margin-top: -7rem;
+    padding: 1rem;
+    gap: 1rem;
+        .PartnerImgs{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.5rem;
+            .ImageWeb{
+                display: none;
+            }
+        }
+        h2{
+            @include mixins.SmallerBold;
+            font-size: 18px;
+        }
+        p{
+            @include mixins.GrayText;
+        }
+        button{
+            margin-top: 0.5rem;
+            @include mixins.BlueBttn;
+        }
+        .WebBlue{
+            display: none;
+        }
+        .WebPic{
+            display: none;
+        }
+}

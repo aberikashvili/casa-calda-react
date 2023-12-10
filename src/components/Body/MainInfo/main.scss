@@ -1,0 +1,68 @@
+@use '../../../assets/mixins';
+
+.Main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    .Video{
+        width: 100%;
+    }
+    .Ukure{
+        display: none;
+    }
+    .MainImg{
+        border-radius: 2px;
+        width: 100%
+    }
+    h2{
+        @include mixins.SmallerBold;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+    p{
+        font-family: Avenir Next Georgian;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+            .BlueText{
+                color: #245AA3;
+                font-weight: 700;
+            }
+    }
+    .Abody{
+        padding-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .Ainfo{
+            width: 48%;
+            margin-bottom: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            .Num{
+                font-family: Avenir Next Georgian;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 48px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #F58634;
+            }
+            .Numgray{
+                font-family: Avenir Next Georgian;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: rgba(20, 20, 20, 0.5);
+            }
+        }
+    }
+}
