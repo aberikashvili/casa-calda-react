@@ -1,5 +1,20 @@
+
+@font-face {
+  font-family: 'Avenir Next Georgian-Bold';
+  src: url('./fonts/AvenirNextGeorgian-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next Georgian-Medium';
+  src: url('./fonts/AvenirNextGeorgian-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 main {
   margin-left:16px;
+  margin-top: 19px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,19 +22,24 @@ main {
   
   @media screen and (min-width: 768px) {
   margin-left: 20px;
+  margin-top: 29px;
   max-width: 1920px;
   }
   @media screen and (min-width:992px) {
     margin-left:40px;
+    margin-top: 39px;
   }
   @media screen and (min-width: 1200px) {
     margin-left:60px;
+    margin-top: 69px;
   }
   @media screen and (min-width: 1400px) {
     margin-left:80px;
+    margin-top: 89px;
   }
   @media screen and (min-width: 2020px) {
     margin-left:160px;
+    margin-top: 100px;
   }
 }
 .ourprojects{
@@ -51,6 +71,7 @@ main {
   @media screen and (min-width: 1600px) {
     width: 1410px;
     padding-right: 10px;
+    
   }
   @media screen and (min-width: 2020px) {
     width: 1590px;
@@ -75,17 +96,28 @@ main {
   margin-left:0;
   padding: 0;
   color: var(--Black, #141414);
-  font-family: Avenir Next Georgian;
+  font-family:'Avenir Next Georgian-Bold';
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; 
+  @media screen and (min-width: 768px) {
+    width: 344px;
+    font-size: 28px;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 384px;
+    font-size: 36px;
+  }
  }
 .ourprojects-h2 {
   
   width: 343px;
   color: rgba(20, 20, 20, 0.60);
-  font-family: Avenir Next Georgian;
+  font-family:'Avenir Next Georgian-Medium';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -105,21 +137,30 @@ main {
   align-items: flex-start;
   justify-content: space-between;
   gap: 5px;
+  @media screen and (min-width: 992px) {
+    min-width:520px;
+  }
+  @media screen and (min-width: 1206px) {
+    min-width:auto;
+  }
+  
   @media screen and (min-width: 768px) {
     gap: 12px;
   }
+  
  button{
     color: var(--White, #FFF);
     padding: 9.5px 28px;
     border-radius: 100px;
     background: rgba(20, 20, 20, 0.30);
     border: none;
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Medium';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; 
     text-transform: uppercase;
+    
     @media screen and (min-width: 768px) {
       display: flex;
       padding: 13.5px 28px;
@@ -130,11 +171,11 @@ main {
   }
 }
 .projects-gallery{
-  margin-top: 80px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   gap: 5px;
   @media screen and (min-width: 850px) {
     gap: 10px;
@@ -197,7 +238,7 @@ main {
   height: 21px;
   margin-top: 12px;
   color: var(--Orange, #F58634);
-  font-family: Avenir Next Georgian;
+  font-family:'Avenir Next Georgian-Bold';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -211,7 +252,7 @@ main {
   width: 204px;
   height: 24px;
   color: var(--Black, #141414);
-  font-family: Avenir Next Georgian;
+  font-family:'Avenir Next Georgian-Bold';
   font-size: 16px;
   font-style: normal;
   font-weight: 700;

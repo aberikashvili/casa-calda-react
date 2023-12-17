@@ -12,11 +12,7 @@ const MyProjects = () => {
       isDone:true,
       title:"ქუთაისის პარლამენტი"
   },
-  {
-      url:"./images/parliament.png", 
-      isDone:false,
-      title:"ქუთაისის პარლამენტი"
-  },
+  
   {
       url:"./images/parliament.png", 
       isDone:true,
@@ -32,21 +28,7 @@ const MyProjects = () => {
   isDone:true,
   title:"ქუთაისის პარლამენტი"
 },
-{
-url:"./images/parliament.png", 
-isDone:true,
-title:"ქუთაისის პარლამენტი"
-},
-{
-url:"./images/parliament.png", 
-isDone:true,
-title:"ქუთაისის პარლამენტი"
-},
-{
-url:"./images/parliament.png", 
-isDone:true,
-title:"ქუთაისის პარლამენტი"
-},
+
 {
 url:"./images/parliament.png", 
 isDone:false,
@@ -94,7 +76,7 @@ const buttonStyle = {
         </h2>
         </div>
         <div className="buttons">
-          <button onClick={() => setFilter('all')} style={buttonStyle.all} >ყველა</button>
+          <button onClick={() => setFilter('all')} style={buttonStyle.all} >ყველა პროექტი</button>
           <button onClick={() => setFilter('inProgress')} style={buttonStyle.inProgress}>მიმდინარე</button>
           <button onClick={() => setFilter('completed')} style={buttonStyle.completed}>დასრულებული</button>
         </div>
