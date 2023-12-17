@@ -1,14 +1,26 @@
+@font-face {
+  font-family: 'Avenir Next Georgian-Bold';
+  src: url('./fonts/AvenirNextGeorgian-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next Georgian-Medium';
+  src: url('./fonts/AvenirNextGeorgian-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 main{
-//   display: flex;
-//   flex-direction: column;
-//   align-items:center;
-//   justify-content: center;
- 
-//  @media screen and (min-width: 768px) {
-//   all: unset;
   
-// }
-max-width: 2100px;
+ max-width: 2100px;
+ @media screen and (max-width: 768px) {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+ }
+ 
 }
 .project-details{
   margin-top: 19px;
@@ -38,7 +50,7 @@ max-width: 2100px;
     width:100%;
     margin-left:16px;
     color: var(--Black, #141414);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Bold';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -53,7 +65,7 @@ max-width: 2100px;
     margin-left: 16px;
     margin-top: 8px;
     color: var(--Orange, #F58634);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Bold';
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -70,7 +82,6 @@ max-width: 2100px;
     width: 375px;
     height: 322px;
     flex-shrink: 0;
-    // width: 100%;
     
     @media screen and (min-width: 768px) {
       width: 100%;
@@ -103,12 +114,10 @@ max-width: 2100px;
     flex-direction: column;
     justify-content:flex-start;
     align-items: flex-start;
-    // gap: 16px;
     color: var(--White, #FFF);
-    font-family: Avenir Next Georgian;
     font-size: 14px;
     font-style: normal;
-    line-height: 150%; /* 21px */
+    line-height: 150%; 
     background: var(--Orange, #F58634);
     @media screen and (min-width: 768px) {
       position: absolute;
@@ -156,6 +165,7 @@ max-width: 2100px;
       all: unset;
       width: 285px;
       height: 21px;
+      font-family:'Avenir Next Georgian-Bold';
       font-weight: 700;
       color: #FFF;
       @media screen and (min-width: 768px) {
@@ -166,6 +176,7 @@ max-width: 2100px;
     li {
       width: 233px;
       height: 21px;
+      font-family: 'Avenir Next Georgian-Medium';
       font-weight: 500;
       margin-top: 16px;
       margin-left: 12px;
@@ -181,7 +192,7 @@ max-width: 2100px;
     margin-top: 370px;
     margin-left: 16px;
     color: var(--Black, #141414);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Medium';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -215,7 +226,7 @@ max-width: 2100px;
     margin-top: 20px;
     margin-left: 16px;
     color: var(--Black, #141414);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Medium';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -247,7 +258,7 @@ max-width: 2100px;
 .photo-gallery{
   margin-left: 16px;
   margin-top: 40px;
-  
+ 
   @media screen and (min-width: 768px) {
     margin-top: 180px;
     margin-left:60px;
@@ -271,7 +282,7 @@ max-width: 2100px;
     width: 157px;
     height: 27px;
     color: var(--Black, #141414);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Bold';
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -280,7 +291,7 @@ max-width: 2100px;
       width: 313px;
       height: 54px;
       font-size: 36px;
-      // margin-left:0px;
+      
     }
   }
   .gallery-h1{
@@ -354,20 +365,26 @@ max-width: 2100px;
   }
   
   .item{
-    background-color: #F58634;
     width: 200px;
     height: 200px;
+    
     @media screen and (min-width: 768px) {
     all: unset;}
+  }
+  .grids {
+    @media screen and (max-width: 768px) {
+      width: 408px;
+    }
+    @media screen and (max-width: 767px) {
+    overflow-x:scroll;
+    display: flex;
+    }
   }
   .gridcontainer{
     margin-top: 12px;
     display: flex;
     gap:5px;
-    
-    
-    
-    @media screen and (min-width: 768px) {
+   @media screen and (min-width: 768px) {
       
       margin-left: 16px;
       display: grid;
@@ -439,10 +456,11 @@ max-width: 2100px;
     @media screen and (min-width: 2020px) {
       grid-template-columns: 385px 385px 655px 385px;
       grid-template-rows:385px 385px ;
-      // margin-top:24px;
+      
     }
     
 .item{
+  
   background-color: 
   #D9D9D9;
   
@@ -513,8 +531,8 @@ max-width: 2100px;
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding-right: 550px;
-    // width: 2150px;
+    
+    
     @media screen and (min-width: 768px) {
       width: 710px;
       padding-right: 30px;
@@ -562,12 +580,16 @@ max-width: 2100px;
   .slider-containers{
     display: flex;
     gap: 5px;
-    overflow-x: scroll;
+    overflow-x:scroll;
     margin-top: 20px;
+    @media screen and (max-width: 768px) {
+      width: 408px;
+    }
+    
     @media screen and (min-width: 768px) {
       margin-top: 15px;
       display: flex;
-      
+      overflow-x:hidden;
       scroll-behavior: smooth;
       gap: 20px;
      
@@ -576,20 +598,19 @@ max-width: 2100px;
     width: 164px;
     height: 27px;
     color: var(--Black, #141414);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Bold';
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; 
     @media screen and (min-width: 768px) {
       width: 328px;
-      // height: 54px;
       font-size: 36px;
     }
   }
   img{
-    width: 299px;
-    height: 218px;
+    width: 200px;
+    height: 200px;
     margin-top: 12px;
     flex-shrink: 0;
     @media screen and (min-width: 768px) {
@@ -632,7 +653,7 @@ max-width: 2100px;
     height: 21px;
     margin-top: 2px;
     color: var(--Orange, #F58634);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Bold';
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -646,29 +667,17 @@ max-width: 2100px;
     width: 184px;
     height: 24px;
     color: var(--Black, #141414);
-    font-family: Avenir Next Georgian;
+    font-family:'Avenir Next Georgian-Bold';
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
     @media screen and (min-width: 768px) {
-      width: 245px;
+      width: 265px;
       height: 30px;
       font-size: 20px;
       
     }
-  }
-  .grids{
-    all: unset;
-    overflow-x:scroll;
-    display: flex;
-    flex-direction: row;
-    
-  }
-  .gridcontainer2{
-    width: 500px;
-    height: 500px;
-    background-color: #F58634;
   }
   
 }
