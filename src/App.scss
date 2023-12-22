@@ -609,14 +609,14 @@
             position: relative;
             overflow: hidden;
                 img{
-                    width: 60%;
-                    max-width: 57.813rem;
+                    max-width: 50rem;
                     height: auto;
                 }
                 .right{
                     display: flex;
                     flex-direction: column;
                     gap: 1.5rem;
+                    min-width: 533px;
                     width: 40%;
                     justify-content: space-between;
                     padding-bottom: 0;
