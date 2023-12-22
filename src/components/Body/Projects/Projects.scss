@@ -26,6 +26,9 @@
         .Abuttons{
             display: flex;
             gap: 2rem;
+            img{
+                cursor: pointer;
+            }
         }
     }
 

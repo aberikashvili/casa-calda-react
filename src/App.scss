@@ -64,13 +64,13 @@
         margin-left: 13rem;
         display: flex;
         flex-direction: row;
-        overflow: hidden;
         justify-content: space-between;
         padding: 0;
         .header{
             padding-top: 11rem;
             display: flex;
             gap: 2rem;
+            width: 40%;
             p{
                 width: 40.938rem;
             }
@@ -82,13 +82,14 @@
             }
         }
         .PrizeImgs{
+            margin-right: -2.5%;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items:center;
             overflow: hidden;
+            width: 60%;
             max-width: 62.5rem;
-            margin-left: 13rem;
             max-height: 40rem;
             .MobPic{
                 display: none;
@@ -201,15 +202,14 @@
 
     .Pbody{
         padding: 13rem;
-        padding-right: 9rem;
+        padding-right: 0.5rem;
         .slide{
             display: flex;
             flex-direction: row;
-            max-height: 586px;
+            // max-height: 586px;
             position: relative;
             overflow: hidden;
                 img{
-                    min-width: 57.813rem; 
                     max-width: 100%;
                     height: auto;
                 }
@@ -217,7 +217,9 @@
                     display: flex;
                     flex-direction: column;
                     gap: 1.5rem;
-                    width: 625px;
+                    width: 80%;
+                    justify-content: space-between;
+                    padding-bottom: 0;
                     .SecondGray{
                         display: block;
                         @include mixins.GrayText;
@@ -275,7 +277,16 @@
                     }
                 }
         }
+        .Mobile{
+            display: none;
+        }
         .Oprojects{
+            .Abuttons{
+                padding-right: 9rem;
+                .Mobile{
+                    display: none;
+                }
+            }
             img{
                 width: 2.5rem;
             }
@@ -376,9 +387,6 @@
         }
         .WTSAboutUsB{
             padding-left: 5rem;
-            .WebWTS{
-                padding-left: 10rem;
-            }
         }
         .NeedHelpB{
             padding-left: 5rem;
@@ -452,15 +460,16 @@
         margin-left: 10rem;
         display: flex;
         flex-direction: row;
-        overflow: hidden;
         justify-content: space-between;
         padding: 0;
+        overflow: hidden;
         .header{
             padding-top: 11rem;
             display: flex;
             gap: 2rem;
+            width: 40%;
             p{
-                width: 40.938rem;
+                max-width: 40.938rem;
             }
             h2{
                 font-size: 2rem;
@@ -470,13 +479,14 @@
             }
         }
         .PrizeImgs{
+            margin-right: -2.5%;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items:center;
             overflow: hidden;
+            width: 60%;
             max-width: 62.5rem;
-            margin-left: 10rem;
             max-height: 40rem;
             .MobPic{
                 display: none;
@@ -485,8 +495,7 @@
                 width: 9.375rem;
             }
             img{
-                width: 15.625rem;
-                box-sizing:border-box;
+                width: 25%;
                 max-height: 250px;
             }
             .Uppic{
@@ -609,6 +618,8 @@
                     flex-direction: column;
                     gap: 1.5rem;
                     width: 40%;
+                    justify-content: space-between;
+                    padding-bottom: 0;
                     .SecondGray{
                         display: block;
                         @include mixins.GrayText;
@@ -652,19 +663,22 @@
                                 }
                         }
                     }
+                }
+                .StatusTitle{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    .status{
+                        font-size: 1rem;
                     }
-                    .StatusTitle{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 1.5rem;
-                            .status{
-                                font-size: 1rem;
-                            }
-                            .title{
-                                font-size: 2.25rem;
-                            }
+                    .title{
+                        font-size: 2.25rem;
                     }
                 }
+            }
+        }
+        .Mobile{
+            display: none;
         }
         .Oprojects{
             img{
@@ -738,11 +752,20 @@
   }
 
   @media screen and (min-width: 901px) and (max-width: 1440px){
+    .Header{
+        .Orangebutton{
+            display: inline-block;
+            position: absolute;
+            right: 10%;
+            width: 12.188rem;
+        }
+    }
     .HeaderTwo{
         display: none;
     }
     .Burger-button{
         right: 4%;
+        top: 3%;
     }
     .Main{
         .Video{
@@ -788,6 +811,9 @@
     .Pbody{
         margin-left: 2.5%;
         margin-right: 2.5%;
+        .Web{
+            display: none;
+        }
     }
     .PartnersB{
         margin-left: 2.5%;
@@ -816,5 +842,10 @@
   @media screen and (min-width: 375px) and (max-width: 900px) {
     .HeaderTwo{
         display: none;
+    }
+    .Pbody{
+        .Web{
+            display: none;
+        }
     }
   }

@@ -21,6 +21,7 @@ export default function Header() {
         ) : (
           <img src={Logo} alt="Casa-Calda Logo" className='CasaLogo'/>
         )}
+        <button className='Orangebutton'>დაგვიკავშირდით</button>
         <div className="burgerdiv" onClick={toggleMenu}>
           <BurgerMenu menuOpen={menuOpen} />
         </div>

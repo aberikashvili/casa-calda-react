@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import ProjectsWeb from '../ProjectsWeb/ProjectsWeb'
+
 import Right from '../../../Imgs/Right.svg'
 import Left from '../../../Imgs/Left.svg'
 import Main from '../../../Imgs/Main.png'
@@ -46,8 +48,9 @@ export default function Projects() {
                 'სახანძრო სისტემები',
                 'სრული სისტემების კომპიუტერული მართვა BMS',
               ],
-        }
+        },
     ]
+
 
     const handleNext = () => {
         setCurrentSlider((currentSlider + 1) % sliders.length);
@@ -60,15 +63,15 @@ export default function Projects() {
     return (
     <>
         <div className="Pbody">
-            <div className="Oprojects">
+            <div className="Oprojects Mobile">
                 <h2 className='Mobile'>ჩვენი პროექტები</h2>
                 <h2 className="Web">პროექტები</h2>
                 <div className="Abuttons">
-                    <img src={Left} alt="left arrow" className='Gblack' onClick={() => handlePrevious()}/>
-                    <img src={Right} alt="right arrow" onClick={() => handleNext()}/>
+                    <img src={Left} alt="left arrow" className='Gblack Mobile' onClick={() => handlePrevious()}/>
+                    <img src={Right} alt="right arrow Mobile" className='Mobile' onClick={() => handleNext()}/>
                 </div>
             </div>
-            <div className="slide">
+            <div className="slide Mobile">
                 <img src={sliders[currentSlider].img} alt="ქუთაისის პარლამენტის ფოტო" />
                 <div className="right">
                     <div className="StatusTitle">
@@ -90,6 +93,9 @@ export default function Projects() {
                     <button className='Orange'>სრული პროექტი</button>
                 </div>
             </div>
+            <div className="slide Web" >
+                <ProjectsWeb sliders={sliders} />
+            </div>                   
         </div>
         <div className="backgroundI">
             <img src={LinesB} alt="oval lines"/>
