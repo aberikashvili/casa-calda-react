@@ -12,19 +12,18 @@ export default function AboutUS() {
     const { members, getMemberData, } = useGetMembers();
 
     useEffect(() => {
-    getData();
-    getMemberData();
-    }, [getData, getMemberData]);
+        getData();
+    }, [getData]);
+
+    useEffect(() => {
+        getMemberData();
+    },[getMemberData])
     
 //     if (isLoading || Loading) {
 //     return <div>Loading...</div>;
 //   }
     
     return (
-        <div>
-            {/* {(isLoading ) ?(
-                <div>... loading</div>
-            ) : ( */}
                 <div className="bg-primaryWhite">
                     <Title1 >თქვენი საიმედო პარტნიორი </Title1>
                     <Title2 className="text-primaryBlue">კომპანია „თბილი სახლი”</Title2>
@@ -52,7 +51,5 @@ export default function AboutUS() {
                         ))}</div>
                     </TeamBox>
                 </div>
-            {/* )}  */}
-            </div>
     )
 }

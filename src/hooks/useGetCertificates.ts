@@ -10,18 +10,18 @@ export interface Product {
 
 export function useGetCertificates() {
     const [products, setProducts] = useState<Product[]>([]);
-    const [isLoading,setIsLoading ] = useState<boolean>(false);
-
+    // const [isLoading,setIsLoading ] = useState<boolean>(false);
+    
     
     async function getData() {
-        setIsLoading(true);
+        // setIsLoading(true);
         try {
            const resp = await axios.get("https://dummyjson.com/products?limit=18");
            setProducts(resp.data.products)
         } catch (error) {
             console.error("Error fetching data:", error);
         } 
-        setIsLoading(false);
+        // setIsLoading(false);
       
     }
     console.log(products)
@@ -31,6 +31,6 @@ export function useGetCertificates() {
         products,
         setProducts,
         getData,
-        isLoading,
+        // isLoading,
     }
 }

@@ -14,14 +14,18 @@ export interface UseGetMembersOptions {
 
 export function useGetMembers() {
     const [members, setMembers] = useState<Member[]>([]);
+    // const [currentPage, setCurrentPage] = useState<number>(1);
+    // const [totalPages, setTotalPages] = useState<number>(1);
+
     // const [Loading, setLoading] = useState<boolean>(false);
 
     
     async function getMemberData() {
         // setLoading(true)
         try {
-           const resp = await axios.get("https://dummyjson.com/users?limit=4");
-           setMembers(resp.data.users)
+           const resp = await axios.get("https://dummyjson.com/users?limit=3");
+            setMembers(resp.data.users);
+            // setCurrentPage(resp.data.skip / resp.data.limit + 1)
         } catch (error) {
             console.error("Error fetching data:", error);
         } 

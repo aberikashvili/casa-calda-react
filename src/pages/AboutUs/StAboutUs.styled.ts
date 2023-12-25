@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const StAboutUs = styled.div`
-width: 100%;
-background-color:red;
-`;
-
 export const Title1 = styled.h1`
 font-size:4rem;
 font-weight:700;
@@ -26,6 +21,7 @@ transform: translate(-50%, -40%);
 top: -1px;
 left: 50%;
 width:1330px;
+max-width:100%;
 height: 550px;
 background-color:#D9D9D9;
 `
