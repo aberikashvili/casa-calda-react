@@ -1,19 +1,12 @@
 import {Title1,Title2,DescriptionBox,CoverBox,Description,CertificateBox,TeamBox } from "./StAboutUs.styled"
 import { useEffect } from "react";
-import { useGetCertificates } from "../../hooks/useGetCertificates";
-import { Product } from "../../hooks/useGetCertificates";
-import { Member } from "../../hooks/useGetMembers";
 import { Certificate } from "./components/Certificates";
-import { Members } from "./components/Members";
 import { useGetMembers } from "../../hooks/useGetMembers";
+import { Slider } from "../../components/Slider";
 
 export default function AboutUS() {
-    const { products,getData,} = useGetCertificates();
-    const { members, getMemberData, } = useGetMembers();
+    const {  getMemberData, } = useGetMembers();
 
-    useEffect(() => {
-        getData();
-    }, [getData]);
 
     useEffect(() => {
         getMemberData();
@@ -40,15 +33,13 @@ export default function AboutUS() {
                     
                     <CertificateBox>
                         <h2 className="text-4xl font-bold">ჯილდოები,სიგელები</h2>
-                        <div className="flex flex-wrap ">{products.map((product: Product) => (
-                            <div className="p-3">< Certificate key={product.id} {...product} /> </div>
-                        ))}</div>
+                        <div className="flex flex-wrap ">
+                            < Certificate/> 
+                        </div>
                     </CertificateBox>
                     <TeamBox>
                         <h2 className="text-4xl font-bold">ჩვენი გუნდი</h2>
-                        <div className="flex flex-wrap ">{members.map((member: Member) => (
-                            <div className="p-3">< Members key={member.id} {...member} /> </div>
-                        ))}</div>
+                        <Slider itemsPerSlide={4} />
                     </TeamBox>
                 </div>
     )

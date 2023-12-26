@@ -7,25 +7,26 @@ export interface Member {
     lastName: string;
     image: string;
 }
-
-export interface UseGetMembersOptions {
-  itemsPerPage: number;
+export interface MembersSliderProps {
+  itemsPerSlide: number;
 }
 
 export function useGetMembers() {
     const [members, setMembers] = useState<Member[]>([]);
-    // const [currentPage, setCurrentPage] = useState<number>(1);
-    // const [totalPages, setTotalPages] = useState<number>(1);
+    const [startIndex, setStartIndex] = useState(0);
+    // const [currentSlide, setCurrentSlide] = useState<number>(1);
+    // const [totalSlides, setTotalSlides] = useState<number>(1);
 
     // const [Loading, setLoading] = useState<boolean>(false);
+  
 
     
     async function getMemberData() {
         // setLoading(true)
         try {
-           const resp = await axios.get("https://dummyjson.com/users?limit=3");
+           const resp = await axios.get("https://dummyjson.com/users?limit=10");
             setMembers(resp.data.users);
-            // setCurrentPage(resp.data.skip / resp.data.limit + 1)
+            // setCurrentSlide(resp.data.skip / resp.data.limit + 1)
         } catch (error) {
             console.error("Error fetching data:", error);
         } 
@@ -35,12 +36,14 @@ export function useGetMembers() {
     console.log(members)
    useEffect(() => {
     getMemberData();
-}, []);
+}, [startIndex]);
 
     return {
         members,
         setMembers,
         getMemberData,
         // Loading,
+        startIndex,
+        setStartIndex,
     }
 }
