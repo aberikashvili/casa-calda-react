@@ -1,4 +1,3 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { Carousel } from "react-responsive-carousel";
 import { useGetMembers } from "../hooks/useGetMembers";
 import { Members } from "../pages/AboutUs/components/Members";
