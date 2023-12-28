@@ -33,29 +33,12 @@ export function Slider({ itemsPerSlide }: MembersSliderProps)  {
              </button>
                <button className="pr-8" onClick={handlePrevClick} disabled={startIndex === 0}>
                     <FaArrowLeftLong color={"#CDCECE"} size={24} />
-                </button>
-
-              
+                </button>         
             </div>
-      <div className="flex">
-
-        
+      <div className="flex flex-wrap">
         {visibleMembers.map(member => (
-          <div className="p-3">< Members key={member.image} {...member} /> </div>
+          <div className="pr-3">< Members key={member.image} {...member} /> </div>
         ))}
-          
-      {/* <Carousel
-        infiniteLoop={true}
-        autoPlay={false}
-        showStatus={false}
-        showArrows={true}
-        showThumbs={false}   
-        interval={3000}
-      >
-        {members.map((member: Member) => (
-            <div className="p-3">< Members key={member.image} {...member} /> </div>
-            ))}
-      </Carousel> */}
             </div>
             </>
   );

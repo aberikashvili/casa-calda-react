@@ -15,8 +15,10 @@ margin-bottom:20px;
 `
 export const DescriptionBox = styled.div`
 margin-top:260px;
+position:relative;
 `
 export const CoverBox = styled.div`
+position:absolute;
 transform: translate(-50%, -40%);
 top: -1px;
 left: 50%;
