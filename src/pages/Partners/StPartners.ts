@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const Title = styled.h1`
 font-size:2rem;
 font-weight:700;
-margin-top:160px;
-margin-left:160px;
-margin-bottom:20px;
+margin:110px 0 20px 160px;
 `
 export const Description = styled.div`
 font-size:1rem;

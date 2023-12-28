@@ -1,3 +1,5 @@
+import footer from "../../images/Group 34.jpg"
+
 export function Footer() {
-    return <div>Footer</div>
+    return <img src={ footer} />
 }

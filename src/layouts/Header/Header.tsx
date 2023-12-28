@@ -1,3 +1,5 @@
+import header from "../../images/Header.png"
+
 export function Header() {
-    return <div>Header</div>
+    return <img src={ header} className="w-full" />
 }
