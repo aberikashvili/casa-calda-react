@@ -27,15 +27,15 @@ export function Slider({ itemsPerSlide }: MembersSliderProps)  {
     
     return (
         <>
-            <div className="flex flex-row-reverse">
+            <div className="flex flex-row-reverse mr-3">
                 <button onClick={handleNextClick} disabled={startIndex + itemsPerSlide >= members.length}>
         <FaArrowRightLong color={"#141414"}  size={24}/>
              </button>
-               <button className="pr-8" onClick={handlePrevClick} disabled={startIndex === 0}>
+               <button className="pr-6" onClick={handlePrevClick} disabled={startIndex === 0}>
                     <FaArrowLeftLong color={"#CDCECE"} size={24} />
                 </button>         
             </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-between">
         {visibleMembers.map(member => (
           <div className="pr-3">< Members key={member.image} {...member} /> </div>
         ))}

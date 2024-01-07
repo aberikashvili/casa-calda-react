@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title1 = styled.h1`
 font-size:4rem;
 font-weight:700;
-margin-top:160px;
+margin-top:110px;
 margin-left:160px;
 margin-bottom:30px;
 `
@@ -14,7 +14,7 @@ margin-left:160px;
 margin-bottom:20px;
 `
 export const DescriptionBox = styled.div`
-margin-top:260px;
+margin-top:267px;
 position:relative;
 `
 export const CoverBox = styled.div`
@@ -37,5 +37,5 @@ margin-left:160px;
 margin-right:160px;
 `
 export const TeamBox = styled.div`
-margin:100px 160px;
+margin:200px 160px 203px 160px;
 `
