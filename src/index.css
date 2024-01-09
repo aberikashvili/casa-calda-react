@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Avenir Next Georgian-Bold';
+  src: url('./font/AvenirGeorgian/AvenirNextGeorgian-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next Georgian-Medium';
+  src: url('./font/AvenirGeorgian/AvenirNextGeorgian-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   margin: 0;
   padding: 0;
