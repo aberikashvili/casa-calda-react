@@ -4,7 +4,7 @@ export const Btn_orng = styled.button`
   background-color: var(--orng-rgba);
   color: var(--white-rgba);
   font-size: 14px;
-  font-weight: 500;
+  font-family: "Avenir Next Georgian-medium";
   line-height: 21px;
   padding: 0px 31px;
   border-radius: 100px;
@@ -12,13 +12,14 @@ export const Btn_orng = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  
 `;
 
 export const Btn_active = styled.button`
   background-color: var(--blue-rgba);
   color: var(--white-rgba);
   font-size: 14px;
-  font-weight: 500;
+  font-family: "Avenir Next Georgian-medium";
   line-height: 21px;
   border-radius: 100px;
   max-height: 40px;

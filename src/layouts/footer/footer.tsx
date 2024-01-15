@@ -20,7 +20,7 @@ export function Footer() {
             className="s:hidden md2:flex w-[180px] h-[60px] scale-[0.97] mt-[10px] px-[10px]"
             alt="brandLogo"
           />
-          <p className="s:hidden md2:flex md2:w-[18vw] lg1:w-[20.7vw] break-word whitespace-normal font-[500] leading-[21px] text-[14px] text-blackText-rgba ml-[14px] mt-[10px]">
+          <p className="s:hidden md2:flex md2:w-[18vw] lg1:w-[20.7vw] break-word whitespace-normal font-avenirMedium leading-[21px] text-[14px] text-blackText-rgba ml-[14px] mt-[10px]">
             კომპანია „თბილი სახლი“2001 წლიდან ფუნქციონირებს და მას მნიშვნელოვანი
             ადგილი უკავია ჩვენი ქვეყნის სამომხმარებლო ბაზარზე.
             <br />
@@ -32,7 +32,7 @@ export function Footer() {
             <Links textColor={textColor} borderColor={borderColor} />
           </div>
         
-          <p className="font-[400] text-[12px] leading-[19.2px] text-blackText-rgba mt-[25px] ml-[14px]">
+          <p className="font-avenirNormal text-[12px] leading-[19.2px] text-blackText-rgba mt-[25px] ml-[14px]">
             Casa Calda © 2023. ყველა უფლება დაცულია
           </p>
         </div>

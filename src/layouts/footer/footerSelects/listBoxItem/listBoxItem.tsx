@@ -8,7 +8,7 @@ export function ListBoxItem({ title, links, isOpen, toggle }: any) {
     <div className="border-borderColor-rgba border-b-2 cursor-default border-x-0 border-t-0 py-5 bg-white text-left text-gray-900 ">
       <Listbox>
         <Listbox.Label onClick={toggle} className="relative w-full">
-          <span className="flex items-center font-[700] text-[14px] leading-[21px] text-blackText-rgba">
+          <span className="flex items-center font-avenirBold text-[14px] leading-[21px] text-blackText-rgba">
             {title}
           </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
@@ -36,7 +36,7 @@ export function ListBoxItem({ title, links, isOpen, toggle }: any) {
             {links.map((link: any, index: string | number) => (
               <li
                 key={index}
-                className="font-[500] text-[14px] leading-[21px] text-black-rgba-]"
+                className="font-avenirMedium text-[14px] leading-[21px] text-black-rgba-]"
               >
                 <Link to={links[index].to}>{link.label}</Link>
               </li>

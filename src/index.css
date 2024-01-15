@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-family: "Avenir Georgia", sans-serif; */
 }
 
 :root{
@@ -18,3 +20,27 @@
   --labelGray-rgba:rgba(20, 20, 20, 1);
 }
 
+@font-face {
+  font-family: 'Avenir Next Georgian-Bold';
+  src: url('./componenets/fontFamily/AvenirGeorgian/AvenirNextGeorgian-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next Georgian-normal';
+  src: url('./componenets/fontFamily/AvenirGeorgian/AvenirNextGeorgian-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next Georgian-medium';
+  src: url('./componenets/fontFamily/AvenirGeorgian/AvenirNextGeorgian-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next Georgian-demi';
+  src: url('./componenets/fontFamily/AvenirGeorgian/AvenirNextGeorgian-Demi.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

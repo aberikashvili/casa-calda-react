@@ -34,7 +34,7 @@ export function Fields() {
             {...register("fullName", { required: true })}
           />
           <Label
-            className={`absolute s:w-[80vw] md2:w-[38vw] lg1:w-[27vw] lg1:ml-[8.2vw]  ${
+            className={`absolute font-avenirNormal s:w-[80vw] md2:w-[38vw] lg1:w-[27vw] lg1:ml-[8.2vw]  ${
               watchData.fullName ? "filledLabel" : ""
             }`}
           >
@@ -50,7 +50,7 @@ export function Fields() {
             {...register("phoneNumber", { required: true })}
           />
           <Label
-            className={`absolute s:w-[80vw] md2:w-[38vw] lg1:w-[27vw] lg1:ml-[8.2vw]  ${
+            className={`absolute font-avenirNormal s:w-[80vw] md2:w-[38vw] lg1:w-[27vw] lg1:ml-[8.2vw]  ${
               watchData.phoneNumber ? "filledLabel" : ""
             }`}
           >
@@ -66,7 +66,7 @@ export function Fields() {
             {...register("mail", { required: true })}
           />
           <Label
-            className={`absolute s:w-[80vw] md2:w-[38vw] lg1:w-[27vw] lg1:ml-[8.2vw]  ${
+            className={`absolute font-avenirNormal s:w-[80vw] md2:w-[38vw] lg1:w-[27vw] lg1:ml-[8.2vw]  ${
               watchData.mail ? "filledLabel" : ""
             }`}
           >
@@ -76,7 +76,7 @@ export function Fields() {
         </InputContainer>
         <div className="flex flex-col s:w-[80vw] md2:w-[38vw] lg1:w-[27vw] lg1:ml-[8.2vw]  h-[128px]">
           <textarea
-            className="h-[128px] outline-none text-[14px] font-[600] leading-[21px] text-black-rgba placeholder:text-blackText-rgba placeholder:font-[400] placeholder:leading-[21px] placeholder:text-[14px]"
+            className="h-[128px] outline-none text-[14px] font-avenirNormal leading-[21px] text-black-rgba placeholder:text-blackText-rgba placeholder:font-[400] placeholder:leading-[21px] placeholder:text-[14px]"
             placeholder=" გასაგზავნი შეტყობინების ტექსტი"
             {...register("text", { required: true })}
           />
