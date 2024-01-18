@@ -3,7 +3,9 @@ import { Links } from "../../componenets/links";
 import Logo from "../../componenets/brandLogo/logo-casacalda 1.png";
 import { FooterLinks } from "./footerLinks";
 import { FooterSelects } from "./footerSelects";
+import { useTranslation } from "react-i18next";
 export function Footer() {
+  const {t}=useTranslation()
   const location = useLocation();
   const textColor = "rgba(20, 20, 20, 1)";
   const borderColor = "rgba(20, 20, 20, 0.2)";
@@ -21,11 +23,9 @@ export function Footer() {
             alt="brandLogo"
           />
           <p className="s:hidden md2:flex md2:w-[18vw] lg1:w-[20.7vw] break-word whitespace-normal font-avenirMedium leading-[21px] text-[14px] text-blackText-rgba ml-[14px] mt-[10px]">
-            კომპანია „თბილი სახლი“2001 წლიდან ფუნქციონირებს და მას მნიშვნელოვანი
-            ადგილი უკავია ჩვენი ქვეყნის სამომხმარებლო ბაზარზე.
+           {t("footer.headlineTexts.text1")}
             <br />
-            <br /> კომპანია საქმიანობას სახალხო მეურნეობის დარგების მრავალი
-            მიმართულებით ახორციელებს.
+            <br />{t("footer.headlineTexts.text2")}
           </p>
             <FooterSelects/>
           <div className="s:mt-[16px] s:ml-[4.4vw] md2:mt-[32px] md2:ml-[12px]">
@@ -33,7 +33,7 @@ export function Footer() {
           </div>
         
           <p className="font-avenirNormal text-[12px] leading-[19.2px] text-blackText-rgba mt-[25px] ml-[14px]">
-            Casa Calda © 2023. ყველა უფლება დაცულია
+          {t("footer.headlineTexts.text3")}
           </p>
         </div>
         <FooterLinks/>

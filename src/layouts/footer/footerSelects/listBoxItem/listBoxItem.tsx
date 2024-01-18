@@ -2,8 +2,22 @@ import { Listbox, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
+interface ListBoxItemProps {
+  title: string;
+  path: { to: string }[];
+  links: Record<string, { to: string; link: string }[]>;
+  isOpen: boolean;
+  toggle: () => void;
+}
+export function ListBoxItem({
+  title,
+  links,
+  isOpen,
+  path,
+  toggle,
+}: ListBoxItemProps) {
+  const linkvalues = Object.values(links || {}).flatMap(Object.values);
 
-export function ListBoxItem({ title, links, isOpen, toggle }: any) {
   return (
     <div className="border-borderColor-rgba border-b-2 cursor-default border-x-0 border-t-0 py-5 bg-white text-left text-gray-900 ">
       <Listbox>
@@ -33,12 +47,12 @@ export function ListBoxItem({ title, links, isOpen, toggle }: any) {
           leaveTo="opacity-0"
         >
           <ul className="flex flex-col mt-[15px] gap-[16px]">
-            {links.map((link: any, index: string | number) => (
+            {linkvalues.map((link: any, index: number) => (
               <li
                 key={index}
                 className="font-avenirMedium text-[14px] leading-[21px] text-black-rgba-]"
               >
-                <Link to={links[index].to}>{link.label}</Link>
+                <Link to={path[index].to}>{link}</Link>
               </li>
             ))}
           </ul>

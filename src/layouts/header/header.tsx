@@ -5,9 +5,11 @@ import Logo from "../../componenets/brandLogo/logo-casacalda 1.png";
 import { HiMenu } from "react-icons/hi";
 import {IoMdClose }from "react-icons/io"
 import { NavBar } from "./navbar";
-import { SelectLanguages } from "./selectLanguages";
+import { SelectLanguages } from "./i18next_multiLanguage/selectLanguages";
+import { useTranslation } from "react-i18next";
 
 export function Header() {
+  const {t}=useTranslation()
   const navigate = useNavigate();
   const location = useLocation();
   const [display, setDisplay] = useState(false);
@@ -60,7 +62,7 @@ export function Header() {
                 navigate("/contact"), setDisplay(false);
               }}
             >
-              დაგვიკავშირდით
+              {t("header.btn_contact")}
             </Btn_orng>
           </div>
         </div>
@@ -70,7 +72,7 @@ export function Header() {
           style={{ padding: "14px 31px" }}
           onClick={() => navigate("/contact")}
         >
-          დაგვიკავშირდით
+          {t("header.btn_contact")}
         </Btn_orng>
         <SelectLanguages />
       </div>

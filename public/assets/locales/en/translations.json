@@ -1,0 +1,126 @@
+{
+    "header": {
+        "navbar": [
+            {
+                "title": "home"
+            },
+            {
+                "title": "About Us"
+            },
+            {
+                "title": "Partners"
+            },
+            {
+                "title": "Projects"
+            },
+            {
+                "title": "Our Work"
+            },
+            {
+                "title": "Employees"
+            }
+        ],
+        "btn_contact": "Contact Us"
+    },
+    "footer": {
+        "headlineTexts": {
+            "text1": "The company 'Tbilisi House' has been operating since 2001 and occupies a significant place on our country's real estate market.",
+            "text2": "The company continues its business with various responsibilities in the field of public relations.",
+            "text3": "Casa Calda © 2023. All rights reserved."
+        },
+        "selects": {
+            "titles": [
+                {
+                    "warmHouse": "Tbilisi House",
+                    "services": "Services",
+                    "QuickLinks": "Quick Links"
+                }
+            ],
+            "links": [
+                {
+                    "warmHouse": [
+                        {
+                            "linkTitle": "About Us"
+                        },
+                        {
+                            "linkTitle": "Employees"
+                        },
+                        {
+                            "linkTitle": "Contact"
+                        },
+                        {
+                            "linkTitle": "Rules and Regulations"
+                        }
+                    ]
+                },
+                {
+                    "services": [
+                        {
+                            "linkTitle": "Hot Water"
+                        },
+                        {
+                            "linkTitle": "Mechanical Systems"
+                        },
+                        {
+                            "linkTitle": "Water Supply Systems"
+                        },
+                        {
+                            "linkTitle": "Air Transport Systems"
+                        },
+                        {
+                            "linkTitle": "Electrification"
+                        }
+                    ]
+                },
+                {
+                    "QuickLinks": [
+                        {
+                            "linkTitle": "FAQs"
+                        },
+                        {
+                            "linkTitle": "Partners"
+                        },
+                        {
+                            "linkTitle": "Projects"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "contactPage": {
+        "headlineTexts": {
+            "title": "Contact Us",
+            "subTitle": "Lorem Ipsum helps designers and typographers generate placeholder text.",
+            "subtitle2": "Templates closely related to reality maximize the impression of the perfumer.",
+            "subTitle3": "Our purchased product, with the user-friendly service, creates a safe and comfortable environment for the customer over a long period of time."
+        },
+        "frameTexts": {
+            "labels": [
+                {
+                    "address": "Address",
+                    "mail": "Email",
+                    "phone": "Phone",
+                    "service": "Service"
+                }
+            ],
+            "infos": [
+                {
+                    "address": "Tbilisi, Lubliana St. #56",
+                    "mail": "info@casacalda.ge",
+                    "phone": "032 2 311 525",
+                    "service": "032 2 455 554"
+                }
+            ]
+        },
+        "fields": {
+            "fieldsLabel": {
+                "fullName": "Full Name",
+                "phoneNumber": "Phone Number",
+                "mail": "Email"
+            },
+            "textAreaLabel": "Text of the message to be sent",
+            "btnSend": "Send"
+        }
+    }
+}

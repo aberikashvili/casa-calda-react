@@ -1,41 +1,32 @@
 import { useState } from "react";
 import { ListBoxItem } from "./listBoxItem";
-const boxesData = [
-  {
-    title: "თბილი სახლი",
-    links: [
-      { to: "/aboutUs", label: "ჩვენ შესახებ" },
-      { to: "/employees", label: "თანამშრომლები" },
-      { to: "/contact", label: "კონტაქტი" },
-      { to: "", label: "წესები და პირობები" },
-    ],
-  },
-  {
-    title: "სერვისები",
-    links: [
-      { to: "/ourWork/weakCurrents", label: "სუსტი დენები" },
-      { to: "/ourWork/mechanicalSystems", label: "მექანიკური სისტემები" },
-      {
-        to: "/ourWork/waterSupplySystems",
-        label: "წყალგაყვანილობის სისტემები",
-      },
-      {
-        to: "/ourWork/Crane-transportSystems",
-        label: "ამწე-სატრანსპორტო სისტემები",
-      },
-      { to: "/ourWork/electricity", label: "ელექტროობა" },
-    ],
-  },
-  {
-    title: "სწრაფი ლინკები",
-    links: [
-      { to: "", label: "ჯილდოები" },
-      { to: "/partners", label: "პარტნიორები" },
-      { to: "/projects", label: "პროექტები" },
-    ],
-  },
+import { useTranslation } from "react-i18next";
+const path = [
+  [{ to: "/aboutUs" }, { to: "/employees" }, { to: "/contact" }, { to: "" }],
+  [
+    { to: "/ourWork/weakCurrents" },
+    { to: "/ourWork/mechanicalSystems" },
+    {
+      to: "/ourWork/waterSupplySystems",
+    },
+    {
+      to: "/ourWork/Crane-transportSystems",
+    },
+    { to: "/ourWork/electricity" },
+  ],
+  [{ to: "" }, { to: "/partners" }, { to: "/projects" }],
 ];
 export function FooterSelects() {
+  const { t } = useTranslation();
+  const footerSelects = t("footer.selects", { returnObjects: true }) as {
+    titles: Record<string, Record<string, string>>;
+    links: Record<string, { linkTitle: string }[]>;
+  };
+  const titles = Object.values(footerSelects.titles || {}).flatMap(
+    Object.values
+  );
+  const links = Object.values(footerSelects.links || {}).flatMap(Object.values);
+
   const [openBoxes, setOpenBoxes] = useState([false, false, false]);
   const toggleBox = (index: any) => {
     const newOpenBoxes = [...openBoxes];
@@ -44,11 +35,12 @@ export function FooterSelects() {
   };
   return (
     <div className="md2:hidden w-screen pt-[82px] flex flex-col px-[4vw]">
-      {boxesData.map((box, index) => (
+      {titles.map((title, index) => (
         <ListBoxItem
           key={index}
-          title={box.title}
-          links={box.links}
+          title={title}
+          links={links[index]}
+          path={path[index]}
           isOpen={openBoxes[index]}
           toggle={() => toggleBox(index)}
         />
