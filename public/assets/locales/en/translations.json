@@ -1,0 +1,74 @@
+{
+    "ourWorkPage": {
+        "titles": {
+            "ourWork": "Our Work"
+        },
+        "descriptions": {
+            "ourWork": "The products purchased from us will create a healthy and comfortable environment for the customer through proper service for a long, multi-year period."
+        },
+        "workCardContent": {
+            "titles": [
+                {
+                    "weakCurrents": "Weak Currents",
+                    "mechanicalSystems": "Mechanical Systems",
+                    "plumbingSystems": "Plumbing Systems",
+                    "hvacSystems": "HVAC Systems",
+                    "electrica    lWork": "Electrical Work"
+                }
+            ],
+            "links": [
+                {
+                    "weakCurrents": [
+                        {
+                            "linkTitle": "Computers, Phones, Television"
+                        },
+                        {
+                            "linkTitle": "Intrusion Detection Systems, Evacuation Systems"
+                        },
+                        {
+                            "linkTitle": "Video Surveillance"
+                        },
+                        {
+                            "linkTitle": "Background Music"
+                        },
+                        {
+                            "linkTitle": "Building Management Systems (BMS)"
+                        }
+                    ],
+                    "mechanicalSystems": [
+                        {
+                            "linkTitle": "Elevator and Escalator Systems"
+                        },
+                        {
+                            "linkTitle": "Ventilation, Cooling, and Heating Systems"
+                        }
+                    ],
+                    "plumbingSystems": [
+                        {
+                            "linkTitle": "Water Supply, Sewage, Drainage Systems"
+                        },
+                        {
+                            "linkTitle": "Fire Suppression Systems"
+                        }
+                    ],
+                    "hvacSystems": [
+                        {
+                            "linkTitle": "Lifts"
+                        },
+                        {
+                            "linkTitle": "Escalators"
+                        }
+                    ],
+                    "electricalWork": [
+                        {
+                            "linkTitle": "High Voltage"
+                        },
+                        {
+                            "linkTitle": "Low Voltage"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
