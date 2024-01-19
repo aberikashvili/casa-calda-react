@@ -4,15 +4,15 @@ import { useTranslation } from "react-i18next";
 const path = [
   [{ to: "/aboutUs" }, { to: "/employees" }, { to: "/contact" }, { to: "" }],
   [
-    { to: "/ourWork/weakCurrents" },
-    { to: "/ourWork/mechanicalSystems" },
+    { to: "/ourWork/0" },
+    { to: "/ourWork/1" },
     {
-      to: "/ourWork/waterSupplySystems",
+      to: "/ourWork/2",
     },
     {
-      to: "/ourWork/Crane-transportSystems",
+      to: "/ourWork/3",
     },
-    { to: "/ourWork/electricity" },
+    { to: "/ourWork/4" },
   ],
   [{ to: "" }, { to: "/partners" }, { to: "/projects" }],
 ];
